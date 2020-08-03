@@ -1,0 +1,14 @@
+﻿
+@{
+	ViewBag.Title = "Cadastrar Beneficiário";
+}
+@section scripts{
+	<script>
+		var urlPost = '@Url.Action("Incluir", "Beneficiario", new { area = "" })';
+		var urlVerificaCPF = '@Url.Action("VerificarCPF", "Beneficiario", new { area = "" })';
+	</script>
+	@Scripts.Render("~/bundles/beneficiarios")
+    @Scripts.Render("~/bundles/utils")
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("Forms")

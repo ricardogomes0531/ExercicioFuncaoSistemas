@@ -1,0 +1,31 @@
+﻿
+<form id="formCadastro" method="post">
+<input type="hidden" id="idCliente" name="idCliente" value=@Session["idCliente"].ToString() />
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<label for="Nome">Nome:</label>
+				<input required="required" type="text" class="form-control" id="Nome" name="Nome" placeholder="Ex.: João" maxlength="50">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="CPF">CPF:</label>
+				<input required="required" type="text" class="form-control" id="CPF" name="CPF" placeholder="Ex.: 077.765.444-22" maxlength="14">
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="pull-right">
+				<button type="submit" class="btn btn-sm btn-success">Salvar</button>
+				@Html.ActionLink("Voltar", "Index", "Beneficiario", new { }, new { @class = "btn btn-sm btn-danger" })
+			</div>
+		</div>
+	</div>
+
+
+</form>
